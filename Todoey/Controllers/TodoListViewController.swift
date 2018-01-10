@@ -13,13 +13,11 @@ class TodoListViewController: UITableViewController {
     var items = [Item]()
     
     let defaults = UserDefaults.standard
+    
+    let dataFilePath = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first?.appendingPathComponent("Items.plist")
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if let array = defaults.array(forKey: "ToDoListArray") as? [Item]{
-            items = array
-        }
         
         let item1 = Item()
         item1.title = "Find Mike"
@@ -33,6 +31,7 @@ class TodoListViewController: UITableViewController {
         item3.title = "Destroy Demogorgon"
         items.append(item3)
         
+        loadItems()
         
         
     }
@@ -61,6 +60,8 @@ class TodoListViewController: UITableViewController {
         
         items[indexPath.row].done = !items[indexPath.row].done
         
+        saveItems()
+        
         tableView.reloadData()
         
         tableView.deselectRow(at: indexPath, animated: true)
@@ -79,7 +80,7 @@ class TodoListViewController: UITableViewController {
             
             self.items.append(newItem)
             
-            self.defaults.set(self.items, forKey: "ToDoListArray")
+            self.saveItems()
             
             self.tableView.reloadData()
             
@@ -92,6 +93,28 @@ class TodoListViewController: UITableViewController {
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
+    }
+    
+    func saveItems() {
+        let encoder = PropertyListEncoder()
+        do {
+            let data = try encoder.encode(items)
+            try data.write(to: dataFilePath!)
+        } catch {
+            print("Error encoding")
+        }
+    }
+    
+    func loadItems() {
+        if let data = try? Data(contentsOf: dataFilePath!) {
+            let decoder = PropertyListDecoder()
+            do {
+                items = try decoder.decode([Item].self, from: data)
+            } catch {
+                print("Error decoding")
+            }
+            
+        }
     }
 }
 
