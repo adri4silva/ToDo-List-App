@@ -8,8 +8,9 @@
 
 import Foundation
 
-class Item {
+class Item: Codable {
     
+    // all the items of an "Codable" class must be a "normal" type i.e. String, Int... not custom type
     var title: String = ""
     var done: Bool = false
     
