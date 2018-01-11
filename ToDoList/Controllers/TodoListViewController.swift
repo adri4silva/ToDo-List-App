@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Todoey
+//  ToDoList
 //
 //  Created by Adrián Silva on 8/1/18.
 //  Copyright © 2018 Adrián Silva. All rights reserved.
@@ -72,7 +72,7 @@ class TodoListViewController: UITableViewController {
     @IBAction func addButtonPressed(_ sender: UIBarButtonItem) {
         var textField = UITextField()
         
-        let alert = UIAlertController(title: "Add New Todoey Item", message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add New Item", message: "", preferredStyle: .alert)
         let action = UIAlertAction(title: "Add Item", style: .default) { (action) in
             // what will happen when user clicks the action button
             let newItem = Item()

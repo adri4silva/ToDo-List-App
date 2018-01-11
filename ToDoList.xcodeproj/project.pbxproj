@@ -17,7 +17,7 @@
 
 /* Begin PBXFileReference section */
 		2078935B200679D600E10D33 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
-		20FC93F92003D5530070A1F1 /* Todoey.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Todoey.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20FC93F92003D5530070A1F1 /* ToDoList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ToDoList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		20FC93FC2003D5530070A1F1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		20FC93FE2003D5530070A1F1 /* TodoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoListViewController.swift; sourceTree = "<group>"; };
 		20FC94012003D5530070A1F1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -64,7 +64,7 @@
 		20FC93F02003D5530070A1F1 = {
 			isa = PBXGroup;
 			children = (
-				20FC93FB2003D5530070A1F1 /* Todoey */,
+				20FC93FB2003D5530070A1F1 /* ToDoList */,
 				20FC93FA2003D5530070A1F1 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,12 +72,12 @@
 		20FC93FA2003D5530070A1F1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				20FC93F92003D5530070A1F1 /* Todoey.app */,
+				20FC93F92003D5530070A1F1 /* ToDoList.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		20FC93FB2003D5530070A1F1 /* Todoey */ = {
+		20FC93FB2003D5530070A1F1 /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
 				2078935F20067B3600E10D33 /* Controllers */,
@@ -88,15 +88,15 @@
 				20FC94052003D5530070A1F1 /* LaunchScreen.storyboard */,
 				20FC94082003D5530070A1F1 /* Info.plist */,
 			);
-			path = Todoey;
+			path = ToDoList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		20FC93F82003D5530070A1F1 /* Todoey */ = {
+		20FC93F82003D5530070A1F1 /* ToDoList */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 20FC940B2003D5530070A1F1 /* Build configuration list for PBXNativeTarget "Todoey" */;
+			buildConfigurationList = 20FC940B2003D5530070A1F1 /* Build configuration list for PBXNativeTarget "ToDoList" */;
 			buildPhases = (
 				20FC93F52003D5530070A1F1 /* Sources */,
 				20FC93F62003D5530070A1F1 /* Frameworks */,
@@ -106,9 +106,9 @@
 			);
 			dependencies = (
 			);
-			name = Todoey;
+			name = ToDoList;
 			productName = Todoey;
-			productReference = 20FC93F92003D5530070A1F1 /* Todoey.app */;
+			productReference = 20FC93F92003D5530070A1F1 /* ToDoList.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -127,7 +127,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 20FC93F42003D5530070A1F1 /* Build configuration list for PBXProject "Todoey" */;
+			buildConfigurationList = 20FC93F42003D5530070A1F1 /* Build configuration list for PBXProject "ToDoList" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -140,7 +140,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				20FC93F82003D5530070A1F1 /* Todoey */,
+				20FC93F82003D5530070A1F1 /* ToDoList */,
 			);
 		};
 /* End PBXProject section */
@@ -307,7 +307,7 @@
 				INFOPLIST_FILE = Todoey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asilva.iOS.Todoey;
+				PRODUCT_BUNDLE_IDENTIFIER = asilva.iOS.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -323,7 +323,7 @@
 				INFOPLIST_FILE = Todoey/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = asilva.iOS.Todoey;
+				PRODUCT_BUNDLE_IDENTIFIER = asilva.iOS.ToDoList;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -333,7 +333,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		20FC93F42003D5530070A1F1 /* Build configuration list for PBXProject "Todoey" */ = {
+		20FC93F42003D5530070A1F1 /* Build configuration list for PBXProject "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20FC94092003D5530070A1F1 /* Debug */,
@@ -342,7 +342,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		20FC940B2003D5530070A1F1 /* Build configuration list for PBXNativeTarget "Todoey" */ = {
+		20FC940B2003D5530070A1F1 /* Build configuration list for PBXNativeTarget "ToDoList" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				20FC940C2003D5530070A1F1 /* Debug */,
