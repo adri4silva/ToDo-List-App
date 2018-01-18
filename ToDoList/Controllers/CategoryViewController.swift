@@ -17,6 +17,9 @@ class CategoryViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView(frame: .zero)
+        
         loadCategories()
     }
 
@@ -68,7 +71,9 @@ class CategoryViewController: UITableViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let destinationViewController = segue.destination as! TodoListViewController
+        guard let destinationViewController = segue.destination as? TodoListViewController else {
+            return
+        }
         
         if let indexPath = tableView.indexPathForSelectedRow {
             destinationViewController.selectedCategory = categories[indexPath.row]

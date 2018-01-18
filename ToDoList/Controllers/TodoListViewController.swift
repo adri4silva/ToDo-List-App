@@ -23,6 +23,13 @@ class TodoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tableView.tableFooterView = UIView(frame: .zero)
+
+        navigationItem.hidesSearchBarWhenScrolling = true
+
+        navigationItem.largeTitleDisplayMode = .always
+
         loadItems()
     }
 
