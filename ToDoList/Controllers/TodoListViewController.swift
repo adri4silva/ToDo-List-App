@@ -33,6 +33,10 @@ class TodoListViewController: UITableViewController {
         loadItems()
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.contentOffset = CGPoint(x: 0, y: (tableView.tableHeaderView?.frame.size.height ?? 0))
+    }
+
     //MARK - TableView Datasource Methods
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
