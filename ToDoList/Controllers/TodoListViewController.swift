@@ -24,6 +24,8 @@ class TodoListViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+
         loadItems()
     }
 
@@ -86,6 +88,7 @@ class TodoListViewController: UITableViewController {
                         let newItem = Item()
                         newItem.title = textField.text!
                         currentCategory.items.append(newItem)
+                        newItem.dateCreated = Date()
                     }
                 } catch {
                     print("Error trying to save on Realm")
@@ -114,4 +117,22 @@ class TodoListViewController: UITableViewController {
     }
     
 }
+
+extension TodoListViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        self.items = self.items?.filter("title CONTAINS[cd] %@", searchBar.text!).sorted(byKeyPath: "dateCreated", ascending: true)
+        tableView.reloadData()
+
+    }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadItems()
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+    }
+}
+
 
